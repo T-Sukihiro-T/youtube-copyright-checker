@@ -16,7 +16,9 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         ></script>
 
-         <Analytics/>
+        <link rel="icon" href="/favicon.ico" />
+
+        <Analytics/>
       </head>
       <body className="bg-gray-50 text-gray-900 font-sans">
         <header className="w-full py-4 bg-red-600 text-white text-center font-semibold shadow-md">
