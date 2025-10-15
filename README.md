@@ -2,4 +2,4 @@ A Software as a Service solution that can tell if a youtube video has copywritte
 
 (just a short ad to help get a brotha through school *nod emoji*)
 
-- HIRXWRLD LLC
+- All Rights Reserved & Protected by Christian Glover & HIRXWRLD LLC
