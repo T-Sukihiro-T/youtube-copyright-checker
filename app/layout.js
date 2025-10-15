@@ -1,4 +1,5 @@
 import "./globals.css"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "YouTube Copyright Checker - A HIRXWRLD Product",
@@ -14,6 +15,8 @@ export default function RootLayout({ children }) {
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_CLIENT}`}
           crossOrigin="anonymous"
         ></script>
+
+         <Analytics/>
       </head>
       <body className="bg-gray-50 text-gray-900 font-sans">
         <header className="w-full py-4 bg-red-600 text-white text-center font-semibold shadow-md">
