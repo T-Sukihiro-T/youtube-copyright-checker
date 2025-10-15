@@ -68,6 +68,27 @@ export default function Home() {
           {data && <ResultCard data={data} />}
         </div>
 
+        {/* about section */}
+        <section className="mt-10 text-gray-700 max-w-2xl mx-auto text-center">
+          <h2 className="text-xl font-semibold mb-3">What Is This Tool?</h2>
+          <p className="text-sm leading-relaxed">
+            The YouTube Copyright Checker by HIRXWRLD helps creators instantly analyze
+            any YouTube link for potential copyright claims. Our system checks for
+            copyrighted music, reused content, and other copyright indicators using
+            automated detection logic. This tool is designed to help you create safely
+            and protect your channel from strikes.
+          </p>
+        </section>
+
+        <section className="mt-8 max-w-2xl mx-auto text-gray-700">
+          <h2 className="text-xl font-semibold mb-3">FAQ: </h2>
+          <div className="space-y-3 text-sm">
+            <p><strong>How does it work?</strong> It analyzes YouTube video metadata and public copyright information.</p>
+            <p><strong>Is this tool free?</strong> Yes, it’s completely free to use.</p>
+            <p><strong>Do I need to log in?</strong> Nope! Just paste a link and check instantly.</p>
+          </div>
+        </section>
+
         {/* Banner Sidebar */}
         <AdBanner />
       </div>
