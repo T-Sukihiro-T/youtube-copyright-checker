@@ -79,7 +79,9 @@ export default function Home() {
             and protect your channel from strikes.
           </p>
 
-          <p>
+          <br></br>
+
+          <p className="text-sm leading-relaxed">
             Disclaimer: HIRXWRLD LLC is not responsible for any actions, penalties, or 
             claims resulting from the use of this tool. The YouTube Copyright Checker provides 
             informational results only and does not constitute legal advice. Creators are 
