@@ -78,6 +78,13 @@ export default function Home() {
             automated detection logic. This tool is designed to help you create safely
             and protect your channel from strikes.
           </p>
+
+          <p>
+            Disclaimer: HIRXWRLD LLC is not responsible for any actions, penalties, or 
+            claims resulting from the use of this tool. The YouTube Copyright Checker provides 
+            informational results only and does not constitute legal advice. Creators are 
+            solely responsible for reviewing and managing their own content and copyright compliance.
+          </p>
         </section>
 
         <section className="mt-8 max-w-2xl mx-auto text-gray-700">
