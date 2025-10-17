@@ -21,9 +21,11 @@ export default function RootLayout({ children }) {
         <Analytics/>
       </head>
       <body className="bg-gray-50 text-gray-900 font-sans">
-        <header className="w-full py-4 bg-red-600 text-white text-center font-semibold shadow-md">
-          YouTube Copyright Checker - A HIRXWRLD Product
-        </header>
+        <a href="/">
+          <header className="w-full py-4 bg-red-600 text-white text-center font-semibold shadow-md">
+            YouTube Copyright Checker - A HIRXWRLD Product
+          </header>
+        </a>
         <main className="flex justify-center mt-8 px-4">{children}</main>
         <footer className="text-center text-sm text-gray-500 mt-10 py-4 border-t">
           © {new Date().getFullYear()} HIRXWRLD LLC — All rights reserved.

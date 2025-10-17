@@ -25,8 +25,10 @@ export default function Home() {
 
   return (
       <div className="grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)_250px] gap-6 w-full max-w-[1400px] mx-auto px-4 items-start">
-      {/* Left Sidebar */}
-      <AdSidebarLeft />
+      {/* Left Sidebar 
+      <AdSidebarLeft />*/}
+
+      <div className="hidden lg:block w-[250px]" />
 
       {/* 🧭 Center Section */}
       <div className="flex flex-col items-center justify-start w-full">
@@ -52,18 +54,25 @@ export default function Home() {
             >
               {loading ? "Checking..." : "Check"}
             </button>
+
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+            > Reload </button>
           </div>
 
+          {/* 
           {showAd && (
             <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 text-white">
               <div className="bg-gray-900 p-6 rounded-lg text-center">
-                <h2 className="text-lg mb-4">Watching short ad…</h2>
+                <h2 className="text-lg mb-4">Loading Data</h2>
                 <div className="h-40 w-80 bg-gray-800 flex items-center justify-center">
-                  <p>Advertisement</p>
+                  <p>Thank you for using our service!</p>
                 </div>
               </div>
             </div>
           )}
+            */}
 
           {data && <ResultCard data={data} />}
         </div>
@@ -89,22 +98,59 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="mt-8 max-w-2xl mx-auto text-gray-700">
-          <h2 className="text-xl font-semibold mb-3">FAQ: </h2>
-          <div className="space-y-3 text-sm">
-            <p><strong>How does it work?</strong> It analyzes YouTube video metadata and public copyright information.</p>
-            <p><strong>Is this tool free?</strong> Yes, it’s completely free to use.</p>
-            <p><strong>Do I need to log in?</strong> Nope! Just paste a link and check instantly.</p>
+        <div className="text-center mt-8">
+          <a
+            href="/learn"
+            className="text-red-600 hover:underline font-semibold"
+          >
+            Click here to learn more about copyright and fair use!
+          </a>
+        </div>
+        
+        <section className="mt-8 text-gray-700 w-full max-w-[700px]">
+          <h2 className="text-xl font-semibold mb-4">FAQ</h2>
+
+          <div className="space-y-3 text-sm w-full">
+            <details className="bg-white shadow-sm rounded-lg p-3 w-full max-w-[700px]">
+              <summary className="font-semibold cursor-pointer text-gray-800">
+                How does it work?
+              </summary>
+              <p className="mt-2 text-gray-700">
+                It analyzes YouTube video metadata and public copyright information.
+              </p>
+            </details>
+
+            <details className="bg-white shadow-sm rounded-lg p-3 w-full max-w-[700px]">
+              <summary className="font-semibold cursor-pointer text-gray-800">
+                Is this tool free?
+              </summary>
+              <p className="mt-2 text-gray-700">
+                Yes, it’s completely free to use.
+              </p>
+            </details>
+
+            <details className="bg-white shadow-sm rounded-lg p-3 w-full max-w-[700px]">
+              <summary className="font-semibold cursor-pointer text-gray-800">
+                Do I need to log in?
+              </summary>
+              <p className="mt-2 text-gray-700">
+                Nope! Just paste a link and check instantly.
+              </p>
+            </details>
           </div>
         </section>
 
-        {/* Banner Sidebar */}
-        <AdBanner />
+
+
+        {/* Banner Sidebar 
+        <AdBanner />*/}
+
+        <div className="hidden lg:block w-[250px]" />
       </div>
       
 
-      {/* Right Sidebar */}
-      <AdSideBar />
+      {/* Right Sidebar 
+      <AdSideBar />*/}
     </div>
   );
 }
