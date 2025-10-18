@@ -10,12 +10,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_AD_CLIENT}`}
-          crossOrigin="anonymous"
-        ></script>
-
         <link rel="icon" href="/favicon.ico" />
 
         <Analytics/>

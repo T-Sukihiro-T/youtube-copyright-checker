@@ -1,32 +1,27 @@
 "use client";
 import { useState } from "react";
 import ResultCard from "./components/ResultCard";
-import AdBanner from "./components/AdBanner";
-import AdSideBar from "./components/AdSideBar";
-import AdSidebarLeft from "./components/AdSidebarLeft"; 
 
 export default function Home() {
   const [url, setUrl] = useState("");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [showAd, setShowAd] = useState(false);
 
   async function handleCheck() {
-    setShowAd(true);
-    setTimeout(async () => {
-      setShowAd(false);
-      setLoading(true);
+    setLoading(true);
+    try {
       const res = await fetch(`/api/check?url=${encodeURIComponent(url)}`);
       const json = await res.json();
       setData(json);
+    } catch (err) {
+      console.error("Error fetching data:", err);
+    } finally {
       setLoading(false);
-    }, 7000);
+    }
   }
 
   return (
       <div className="grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)_250px] gap-6 w-full max-w-[1400px] mx-auto px-4 items-start">
-      {/* Left Sidebar 
-      <AdSidebarLeft />*/}
 
       <div className="hidden lg:block w-[250px]" />
 
@@ -60,19 +55,6 @@ export default function Home() {
               className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
             > Reload </button>
           </div>
-
-          {/* 
-          {showAd && (
-            <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 text-white">
-              <div className="bg-gray-900 p-6 rounded-lg text-center">
-                <h2 className="text-lg mb-4">Loading Data</h2>
-                <div className="h-40 w-80 bg-gray-800 flex items-center justify-center">
-                  <p>Thank you for using our service!</p>
-                </div>
-              </div>
-            </div>
-          )}
-            */}
 
           {data && <ResultCard data={data} />}
         </div>
@@ -141,16 +123,9 @@ export default function Home() {
         </section>
 
 
-
-        {/* Banner Sidebar 
-        <AdBanner />*/}
-
         <div className="hidden lg:block w-[250px]" />
       </div>
       
-
-      {/* Right Sidebar 
-      <AdSideBar />*/}
     </div>
   );
 }
